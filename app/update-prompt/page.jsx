@@ -45,6 +45,9 @@ const UpdatePrompt = () => {
           prompt: post.prompt,
           tag: post.tag,
         }),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
       if (response.ok) {
