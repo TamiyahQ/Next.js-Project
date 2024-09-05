@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Form from "@components/Form";
 
@@ -45,7 +45,7 @@ const UpdatePrompt = () => {
           prompt: post.prompt,
           tag: post.tag,
         }),
-        headers: {
+         headers: {
           "Content-Type": "application/json",
         },
       });
